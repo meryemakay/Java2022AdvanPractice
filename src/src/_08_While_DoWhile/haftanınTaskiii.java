@@ -12,26 +12,23 @@ public class haftanınTaskiii {
 
     */
 
-
-
     public static void main(String[] args) {
 
         Scanner scan = new Scanner(System.in);
-        System.out.print("topun ilk bırakıldıgı yuksekligi giriniz : ");
+        System.out.print("topun birakildigi ilk yuksekligi  giriniz : ");
         double yukseklik = scan.nextDouble();
-        double toplamYol = 0;
-        int zıplamaSayısı = 0;
-
-
+        double topunToplamYolu=0;
+        int yerevurmaSayisi=0;
         do {
-            toplamYol += yukseklik;//ilk bırakıldıgı mesafe toplam yola eklendi
-            zıplamaSayısı++;
-            yukseklik*=0.75;
-            toplamYol+=yukseklik;
+            yerevurmaSayisi++;
+            topunToplamYolu+=yukseklik;
+            yukseklik*=(0.75);
+            topunToplamYolu+=yukseklik;
+        }
+        while (yukseklik>=1);
 
-        } while (yukseklik >= 1);
-        System.out.println("topunuz zıplama  sayısı: "+zıplamaSayısı);
-        System.out.println("topunuzun toplam aldıgı yol : "+toplamYol);
-    }
-    }
+        System.out.println("topun vurma sayisi:"+yerevurmaSayisi);
+        System.out.println("topun aldigi toplam yol : "+topunToplamYolu);
 
+    }
+}

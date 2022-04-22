@@ -1,36 +1,28 @@
 package src._14_Encapsulation.Q01;
 
-public class Araba { //POJO:planıng old java object-modal class
-    //POJO classta olması grerken 4
-    /*
-     1- getter setter olur
-     2- to string olur
-     3- constructor olur
-     4 -variable olur
-     */
+public class Araba {// POJO : planing old java object->modal class
+   private String model="haluk";
+   private String renk;
+   private int motor;
+   private int yil;
 
-    private String model;
-    private String renk;
-    private int motor;
-    private int yıl;
-
-    public Araba() { //paramtresız cont degısken ozelıklere sahıptır o yuzden parmetresız yapılır
+    public Araba() {// p'siz cons.
     }
 
-
-    public Araba(String model, String renk, int motor, int yıl) { //parametrelı cont
+    public Araba(String model, String renk, int motor, int yil) {// p'li cons.
         this.model = model;
         this.renk = renk;
-        // this.motor = motor;
-        // this.yıl = yıl;
-        setMotor(motor); //cons obj create etnek ıcın parametre olerk gıren motor datası
-        //setmotor methoduna paarmtre olrk calıstı degerını aldı
-        setYıl(yıl);
+       // this.motor = motor;
+       // this.yil = yil;
+        setMotor(motor);//cons obc cretae etmek için parametre olarak giren motor datası
+                        // setMotor() methoduna parametre olarak çalıştı değerini aldı
+        setYil(yil);
+
     }
 
-    public Araba(int motor, int yıl) { //2 parmrtlı cont
-      setMotor(motor);
-        this.yıl = yıl;
+    public Araba(int motor, int yil) {//p'li cons haciii uretilen cons
+        setMotor(motor);
+        setYil(yil);
     }
 
     public String getModel() {
@@ -42,11 +34,11 @@ public class Araba { //POJO:planıng old java object-modal class
     }
 
     public String getRenk() {
-
         return renk;
     }
 
     public void setRenk(String renk) {
+
         this.renk = renk;
     }
 
@@ -54,35 +46,42 @@ public class Araba { //POJO:planıng old java object-modal class
         return motor;
     }
 
-    public void setMotor(int motor) {//1660 gırdık else calıstı. bu classtkı 1660 atadık provate ınt motor un degerı artık1660 oldu
-        if (motor < 1000) {
+    public void setMotor(int motor) {
+        if (motor<1000){
+            System.out.println("agam bzimle eglenir bu cc de motor mu olur");
+            this.motor=motor+500;
+        }else
+        this.motor = motor;
 
-            System.out.println("bu cc de motor olmaz ");
-            this.motor = 1200; //1000 in altındakı motoru 1200 olarak atıyor
-        } else
-            this.motor = motor;
     }
 
-    public int getYıl() {
-        return yıl;
+    public int getYil() {
+        return yil;
     }
 
-    public void setYıl(int yıl) {
-        if (yıl < 0) {
-            this.yıl = (-1) * yıl; //-2000 gırılınce -1 ıle carpacak sonra bu classtakı yıla esıtleyeck sonra yukardakı yıla goturecek
-            System.out.println("- yıl gırdın");
-        } else
-            this.yıl = yıl;
+    public void setYil(int yil) {
+        if (yil<0){
+            this.yil=(-1)*yil;
+            System.out.println("agam nişledinggg milattan önce araba vardı da biz mi binmedik");
+        }else
+        this.yil = yil;
     }
+  @Override
+  public String toString() {//bu meyhod bu class'dan cerate edilen obj field'larını stringe çeviririr
+      return "Araba{" +
+              "model='" + model + '\'' +
+              ", renk='" + renk + '\'' +
+              ", motor=" + motor +
+              ", yil=" + yil +
+              '}';
+  }
 
-    @Override
-    public String toString() { //objenın ozellıklerını  strınge cevırıyor reflerı
-        return "Araba{" + //tostrng olmadan ref verır //get.model vs kullnmaya gerk kalmıyor
-                "model='" + model + '\'' +
-                ", renk='" + renk + '\'' +
-                ", motor=" + motor +
-                ", yıl=" + yıl +
-                '}';
-    }
+ // @Override
+ // public String toString() {//bu meyhod bu class'dan cerate edilen obj istenen field'larını stringe çeviririr
+ //     return "Araba{ motor=" + motor +
+ //             ", yil=" + yil +
+ //             '}';
+ // }
+
+
 }
-

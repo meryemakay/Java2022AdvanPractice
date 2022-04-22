@@ -12,9 +12,8 @@ public class Soru_SeyahatProjesi {
         1. Köln veya Frankfurta gidebilirsiniz.
         2. Bilet fiyatı hesabı = Her 20 Km başına 5 euro. örn: (100 km yol. Bilet parası  (100/20)* 5 =25 euro
 
-todo İPUCU:  toplamTutar, işlem, FrankfurtKm, KmBirimFiyat   gibi sabit veri tipleri oluşturabilirsiniz. İşlemlerde direkt bunları cağırabilirsiniz.
-
-
+todo İPUCU:  toplamTutar, işlem, FrankfurtKm, KmBirimFiyat   gibi sabit veri tipleri oluşturabilirsiniz.
+ İşlemlerde direkt bunları cağırabilirsiniz.
 
         todo İLK OLARAK;
 
@@ -30,8 +29,6 @@ todo İPUCU:  toplamTutar, işlem, FrankfurtKm, KmBirimFiyat   gibi sabit veri t
       Frankfurt km hesabı işlemi yapın.
 
       son olarak konsolda: Frankfurt 15 Euro         yazsın.
-
-
       todo  case: KÖLN ise
 
       "Rota = Köln" yazdırın.
@@ -65,89 +62,68 @@ todo İPUCU:  toplamTutar, işlem, FrankfurtKm, KmBirimFiyat   gibi sabit veri t
          */
 
         Scanner scan = new Scanner(System.in);
-        System.out.println("Frankfurt - 60 km\n" +
-                "Koln - 80 km\n" +
-                "20 KM başına 5 euro bilet parası alınmaktadir\n\n" +
-                "Nereye yolculuk etmek istiyorsunuz?");
-        String sehir = scan.nextLine().toUpperCase();
-        double KolnKm = 80.0, FrankfurtKm = 60.0;
-        double tekKisilikKolnTutar = (KolnKm/20)*5;
-        double tekKisilikFrankfurtTutar = (FrankfurtKm/20)*5;
-        double bakiyem = 100.0;
-        double paraUstuKoln = bakiyem - tekKisilikKolnTutar;
-        double paraUstuFrankfurt = bakiyem - tekKisilikFrankfurtTutar;
-        if (sehir.equals("FRANKFURT")) {
-            System.out.println("Kaç kişilik bilet istiyorsunuz? (Max 2 kişilik olabilir): ");
-            int bilet = scan.nextInt();
-            switch (bilet) {
-                case 1:
-                    System.out.println(sehir + ": tek kisilik: " + tekKisilikFrankfurtTutar + " euro");
-                    System.out.println("\nBakiyeniz: " + bakiyem + " euro");
-                    System.out.println("Toplam tutar: " + tekKisilikFrankfurtTutar + " euro");
-                    System.out.println("Kalacak Para: " + paraUstuFrankfurt + " euro");
-                    System.out.println("\nBilgileri kontrol ettikten sonra;\nOnaylamak icin - 'E'\nIptal etmek icin - 'H'");
-                    String onayAlmak = scan.next().toUpperCase();
-                    if (onayAlmak.equals("E")) {
-                        System.out.println("Isleminiz basariyla gerceklesti.\n" +
-                                "Iyi yolculuklar.");
-                    }else if (onayAlmak.equals("H")) {
-                        System.out.println("Isleminiz iptal edildi.\n");
-                    }else System.out.println("Hatali giris yaptiniz");
-                    break;
-                case 2:
-                    System.out.println(sehir + ": 2 kisilik: " + 2*tekKisilikFrankfurtTutar + " euro");
-                    System.out.println("\nBakiyeniz: " + bakiyem + " euro");
-                    System.out.println("Toplam tutar: " + 2*tekKisilikFrankfurtTutar + " euro");
-                    System.out.println("Kalacak Para: " + (paraUstuFrankfurt - tekKisilikFrankfurtTutar) + " euro");
-                    System.out.println("\nBilgileri kontrol ettikten sonra;\nOnaylamak icin - 'E'\nIptal etmek icin - 'H'");
-                    onayAlmak = scan.next().toUpperCase();
-                    if (onayAlmak.equals("E")) {
-                        System.out.println("Isleminiz basariyla gerceklesti.\n" +
-                                "Iyi yolculuklar.");
-                    }else if (onayAlmak.equals("H")) {
-                        System.out.println("Isleminiz iptal edildi.\n");
-                    }else System.out.println("Hatali giris yaptiniz");
-                    break;
-                default:
-                    System.out.println("Yanlis giris yaptiniz");
-                    break;
-            }
-        }else if (sehir.equals("KOLN")){
-            System.out.println("Kaç kişilik bilet istiyorsunuz? (Max 2 kişilik olabilir): ");
-            int bilet = scan.nextInt();
-            switch (bilet) {
-                case 1:
-                    System.out.println(sehir + ": tek kisilik: " + tekKisilikKolnTutar + " euro");
-                    System.out.println("\nBakiyeniz: " + bakiyem + " euro");
-                    System.out.println("Toplam tutar: " + tekKisilikKolnTutar + " euro");
-                    System.out.println("Kalacak para: " + paraUstuKoln + " euro");
-                    System.out.println("\nBilgileri kontrol ettikten sonra;\nOnaylamak icin - 'E'\nIptal etmek icin - 'H'");
-                    String onayAlmak = scan.next().toUpperCase();
-                    if (onayAlmak.equals("E")) {
-                        System.out.println("Isleminiz basariyla gerceklesti.\n" +
-                                "Iyi yolculuklar.");
-                    }else if (onayAlmak.equals("H")) {
-                        System.out.println("Isleminiz iptal edildi.\n");
-                    }else System.out.println("Hatali giris yaptiniz");
-                    break;
-                case 2:
-                    System.out.println(sehir + ": 2 kisilik:  " + tekKisilikKolnTutar*2 + " euro");
-                    System.out.println("\nBakiyeniz: " + bakiyem + " euro");
-                    System.out.println("Toplam tutar: " + tekKisilikKolnTutar*2 + " euro");
-                    System.out.println("Kalacak para: " + (paraUstuKoln-tekKisilikKolnTutar) + " euro");
-                    System.out.println("\nBilgileri kontrol ettikten sonra;\nOnaylamak icin - 'E'\nIptal etmek icin - 'H'");
-                    onayAlmak = scan.next().toUpperCase();
-                    if (onayAlmak.equals("E")) {
-                        System.out.println("Isleminiz basariyla gerceklesti.\n" +
-                                "Iyi yolculuklar.");
-                    }else if (onayAlmak.equals("H")) {
-                        System.out.println("Isleminiz iptal edildi.\n");
-                    }else System.out.println("Hatali giris yaptiniz");
-                    break;
-                default:
-                    System.out.println("Yanlis giris yaptiniz");
-            }
-        }else System.out.println("yanlis giris yaptiniz");
+        System.out.println("***** seyahat şirketimize hos geldiniz *****");
+        System.out.println("Frankfurt : 60 km \nKoln : 80\n 20 Km basına 5 euro ucretlendirme yapılır :) ");
+        System.out.print("yolculuk yapacagınız sehri seciniz : ");
+        String hedef = scan.next().toUpperCase();//sehir buyuk harfe update edildi
+        double bakıye = 100;
+        double frUcret = (60 / 20) * 5;
+        double klUcret = (80 / 20) * 5;
 
+        switch (hedef) {
+
+            default:
+                System.out.println("hatalı giriş yaptınız :-( ");
+                break;
+            case "FRANKFURT":
+                System.out.println("ROTA : Frankfurt");
+                System.out.println("Frankfurt " + frUcret + " EURO");
+                System.out.print("kac kisi seyahat edeceksiniz :");
+                int kisi = scan.nextInt();
+
+
+                switch (kisi) {
+                    case 1:
+                        System.out.println("1 kişilik bilet talep ettiniz " + "bilet tutarınız : "
+                                + frUcret + " EURO" + " güncel bakıyeniz: " + (bakıye -= frUcret)+" EURO");
+
+
+                        break;
+                    case 2:
+                        System.out.println("2 kişilik bilet talep ettiniz " +
+                                "bilet tutarınız : " + (frUcret * 2) + " EURO" + " güncel bakıyeniz: " + (bakıye -= frUcret * 2)+" EURO");
+
+                        break;
+                    default:
+                        System.out.println("hatalı giriş yaptınız");
+                        break;
+                }
+
+
+                break;
+            case "KOLN":
+                System.out.println("ROTA : Koln");
+                System.out.println("Koln " + klUcret + " EURO");
+                System.out.print("kac kisi seyahat edeceksiniz :");
+                int kisi1 = scan.nextInt();
+
+
+                switch (kisi1) {
+                    case 1:
+                        System.out.println("1 kişilik bilet talep ettiniz " + "bilet tutarınız : "
+                                + klUcret + " EURO" + " güncel bakıyeniz: " + (bakıye -= klUcret)+" EURO");
+
+                        break;
+                    case 2:
+                        System.out.println("2 kişilik bilet talep ettiniz " +
+                                "bilet tutarınız : " + (klUcret * 2) + " EURO " + "güncel bakıyeniz: " + (bakıye -= klUcret * 2)+" EURO");
+
+                        break;
+                    default:
+                        System.out.println("hatalı giriş yaptınız");
+                        break;
+                }
+                break;
+        }
     }
 }

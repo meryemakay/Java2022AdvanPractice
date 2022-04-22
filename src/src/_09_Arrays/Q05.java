@@ -11,20 +11,30 @@ public class Q05 {
          * input[]= {1,2,3,4,5,6,7}
          * Output : 4
          */
-        int array[]= {1,2,3,4,5,6,7};
-        int arrayToplam=0;
-        int arrayOrtalama=0;
 
-        for (int i=0; i<array.length; i++) {
-            arrayToplam+=array[i];
+        int arr[] = {1, 2, 3, 4, 5, 6, 7};
+        double toplam = 0;
 
+        //for cozum...
+        for (int i = 0; i < arr.length; i++) {
+            toplam += arr[i];
         }
-arrayOrtalama=arrayToplam/array.length;
-        for (int i=0; i<array.length; i++){
-            if (array[i]>arrayOrtalama){
-                System.out.println(array[i]);
-            }
+
+        //for each cozum...
+        //for (int each : arr ) {
+        //	toplam += each;
+        //}
+        double ort = toplam / arr.length;
+        System.out.println("verilen array in ortalamasi =" + ort); //4.0
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] > ort)
+                System.out.println("ortalamadan buyuk olanlar :" + arr[i]);
         }
+        //for (int each : arr ) {
+        //	if (each > ort)
+        //System.out.println("ortalamadan buyuk olanlar :" + each);
+
+        //}
     }
 
 }

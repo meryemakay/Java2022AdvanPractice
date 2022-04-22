@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class QTasKagitMakas01 {
 
     public static void main(String[] args) {
-/*
+
         /* TASK:
          tas >makas
          makas >kagit
@@ -21,7 +21,8 @@ public class QTasKagitMakas01 {
 	dongumuz en bastan calisiyor, istemiyorsa da cikis yapiyor.
 
 	 */
-/*
+
+
         Scanner scan = new Scanner(System.in);
 
         int kullanici_puani = 0;
@@ -278,108 +279,11 @@ public class QTasKagitMakas01 {
             }
 
         }
-*/
-
-     /*
-         static Scanner scan = new Scanner(System.in);
-    static boolean devamKarari=true;
-    static int bilgisayarPuan = 0;
-    static int oyuncuPuan = 0;
-
-    public static void main(String[] args) {
-
-        /* TASK:
-         tas >makas
-         makas >kagit
-         kagit >tas
-
-	Oncelikle kullanicidan secim alabilmek icin Scanner yapiyoruz.
-	Ardindan main fonksiyonumuzda kullanicinin ve bilgisayarin puanlarini tanimliyoruz.
-	While dongumuzun icerisinde kullanicidan aldigimiz secimi “secim” isimli degiskene atiyoruz.
-	Bilgisayarin secimini ise Math.random methodunu kullanarak aliyoruz.
-	Math.random()*3 diyerek bilgisayara 0 ile 3 arasinda bir rastgele sayi urettiriyoruz.
-	Ve secimimiz ile bilgisayarin secimini karsilastirip sonuclarini yaziyoruz.
-	En sonda da kullaniciya oyuna devam etmek isteyip istemedigini soruyoruz, eger istiyorsa
-	dongumuz en bastan calisiyor, istemiyorsa da cikis yapiyor.
-
-	 */
-       /* while (bilgisayarPuan <= 5 && oyuncuPuan <= 5 && devamKarari==true ) {
-
-            System.out.println("Lutfen Tas : 1 , Makas icin : 2 ve Kagit icin : 3 giriniz");
-            int secim = scan.nextInt();
-            int bilgisayarSecimi = ( (int) (Math.random()*3)+1);
-            karsilatirma( secim, bilgisayarSecimi);
-
-            devamKarari=oyunaDevammi();
-
-        }
-    }
-
-    public static boolean oyunaDevammi() {
-        boolean karar = true;
-        System.out.println("Oyuna Devam etmek için 1, Oyunu sonlandırmak 2 giriniz");
-        if (scan.nextInt() != 1) {
-            karar = false;
-            System.out.println("Nereye karpuz kesecektik");
-        }
-        return karar;
-    }
-
-    public static void karsilatirma(int secim,int bilgisayarSecimi){
-
-        switch(secim){
-            case 1:
-                if (bilgisayarSecimi==2){
-                    oyuncuPuan+=1;
-
-                }else if (bilgisayarSecimi==3){
-                    bilgisayarPuan+=1;
-                }
-
-                break;
-            case 2:
-                if (bilgisayarSecimi==1){
-                    bilgisayarPuan+=1;
-
-                }else if (bilgisayarSecimi==3){
-                    oyuncuPuan+=1;
-                }
-
-                break;
-            case 3:
-                if (bilgisayarSecimi==1){
-                    oyuncuPuan+=1;
-
-                }else if (bilgisayarSecimi==2){
-                    bilgisayarPuan+=1;
-                }
-
-                break;
-
-            default:
-                System.out.println("Lutfen dogru secim yapiniz \nBu seciminiz hesaplamada kullanılmayacaktır");
-
-                break;
-
-        }
-        System.out.println("Bilgisayar secimi : "+bilgisayarSecimi);
-        System.out.println("Oyuncu secimi : "+secim);
-        System.out.println("Bilgisayar Puanı : "+bilgisayarPuan);
-        System.out.println("Oyuncu Punanı : "+oyuncuPuan);
 
     }
-}
-
-
-
-    }*/
 
 }
 
 
-
-
-
-}
 
 

@@ -5,17 +5,21 @@ import java.util.Scanner;
 public class Q04 {
     public static void main(String[] args) {
         // TASK : Kullanicidan 4 harfli bir kelime isteyin ve girilen kelimeyi tersten yazdirin
+
         Scanner scan = new Scanner(System.in);
-        System.out.print("Lütfen 4 harfli bir kelime giriniz:");
-        String kelime=scan.nextLine();
-        String harf1=kelime.substring(0,1);
-        String harf2=kelime.substring(1,2);
-        String harf3=kelime.substring(2,3);
-        String harf4=kelime.substring(3);
-        String ters=(harf4+harf3+harf2+harf1);
-        System.out.println("Girilen kelimenin tersi:"+ters);
+        System.out.print("4 harfli kelime giriniz : "); //cuma
+        String str = scan.nextLine();
 
+        if(str.length()!=4){
+            System.out.print("lütfen 4 karakterli kelime giriniz");
+        }else {
+            System.out.print("tersten kelime : "); //tersten kelime : amuc
+            System.out.print(str.substring(3));
+            System.out.print(str.substring(2,3));
+            System.out.print(str.substring(1,2));
+            System.out.print(str.substring(0,1));
 
+        }
 
     }
 }

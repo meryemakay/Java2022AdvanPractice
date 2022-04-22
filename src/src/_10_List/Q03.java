@@ -31,5 +31,5 @@ public class Q03 {
         }
         System.out.println("girilen sayilarin kareleri toplami :" + toplam);
     }
-    }
+}
 

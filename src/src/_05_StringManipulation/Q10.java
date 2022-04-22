@@ -3,7 +3,7 @@ package src._05_StringManipulation;
 import java.util.Scanner;
 
 public class Q10 {
-            public static void main(String[] args) {
+    public static void main(String[] args) {
         /*
             TASK :
          * Kullanıcıdan aldığınız  Adı, Soyadı ve kredi kartı numaralarını aşağıdaki gibi özel forma dönüştürün
@@ -21,35 +21,25 @@ public class Q10 {
 		 	 \\S   ==> space disindaki hersey
 	 */
 
-                Scanner scan= new Scanner(System.in);
-                System.out.print("Adınız:");
-                String ad=scan.nextLine();
-                System.out.print("Soyadınız:");
-                String soyad=scan.nextLine();
-                System.out.print("Kredi Kartı Numaranız:");
-                String kkno=scan.nextLine();
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Lutfen bir isim giriniz :");
+        String isim = scan.next();
+        System.out.print("Lutfen bir soyisim giriniz :");
+        String soyisim = scan.next();
+        System.out.print("Lutfen kart numaranizi giriniz :");
+        String kartno=scan.next();
 
-                if (kkno.length()>16||kkno.length()<16) System.out.println("Lütfen geçerli bir Kredi Kartı Numarası yazın.");
+        if (kartno.length()==16) {
 
-        else {
-                    String kkno2=kkno.substring(0,12).replaceAll("\\S","*");
-                    String kkno3=kkno.substring(12);
-                    String kkx=kkno2+kkno3;
-                    String ad2=ad.substring(1).replaceAll("\\S","*");
-                    String ad3=ad.substring(0,1);
-                    String adx=ad3+ad2;
-                    String soyad2=soyad.substring(1).replaceAll("\\S","*");
-                    String soyad3=soyad.substring(0,1);
-                    String soyadx=soyad3+soyad2;
+            isim= isim.substring(0,1).toUpperCase() + isim.substring(1).replaceAll("\\w", "*");
+            soyisim=soyisim.substring(0,1).toUpperCase() + soyisim.substring(1).replaceAll("\\w", "*");
+            kartno="**** **** **** "+ kartno.substring(kartno.length()-4);
 
-                    System.out.println("Ad :"+adx+" Soyad :"+soyadx+" Kart No :"+kkx);
-
-                }
-
-
-            }
+        }else {
+            System.out.print("lutfen 16 haneli kart numarasi giriniz :");
         }
 
+        System.out.println(isim + " " +  soyisim + " " + kartno);
 
-
-
+    }
+}

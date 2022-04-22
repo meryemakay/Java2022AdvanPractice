@@ -11,6 +11,7 @@ public class QFibonacci {
      */
 
     public static void main(String[] args) {
+
         Scanner scan = new Scanner(System.in);
         System.out.print("pozitif bir tamsayı giriniz : ");
         int sayi = scan.nextInt();
@@ -24,7 +25,6 @@ public class QFibonacci {
             fibo.add(fibo.get(i - 2) + fibo.get(i - 1));
         }
         System.out.println(fibo);
-
 
     }
 }

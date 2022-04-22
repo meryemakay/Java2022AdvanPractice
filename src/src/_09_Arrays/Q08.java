@@ -12,28 +12,22 @@ public class Q08 {
 
         String str = "$1 $23 $134 $2 $7 $24 £32 £40 £2 £65 £4 ";
         */
+
         String str = "$1 $23 $134 $2 $7 $24 £32 £40 £2 £65 £4 ";
-        String[] array = str.split(" ");
-        System.out.println(Arrays.toString(array));
+        String arr[]=str.split(" ");
+        System.out.println(Arrays.toString(arr));
 
-        int toplamEuro = 0;
-        int toplamDolar = 0;
-
-        for (int i = 0; i < array.length; i++) {
-            if (array[i].startsWith("£")) {
-                toplamEuro += Integer.valueOf(array[i].substring(1));;
+        int topDolar=0;
+        int topSterlin=0;
+        for (int i=0; i<arr.length; i++){
+            if (arr[i].contains("$")){
+               topDolar+= Integer.parseInt(arr[i].replace("$",""));
+            }else{
+                topSterlin+= Integer.parseInt(arr[i].replace("£",""));
             }
         }
-
-        for (int i = 0; i < array.length; i++) {
-            if (array[i].startsWith("$")) {
-                toplamDolar += Integer.valueOf(array[i].substring(1));;
-            }
-        }
-
-        System.out.println("£ toplamı = " + toplamEuro);
-        System.out.println("$ toplamı = " + toplamDolar);
-
+        System.out.println("toplam dolar tutari :"+topDolar);
+        System.out.println("toplam sterlin tutari :"+topSterlin);
     }
 }
 

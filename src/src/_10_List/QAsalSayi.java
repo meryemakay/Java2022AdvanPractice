@@ -32,5 +32,3 @@ public class QAsalSayi {
         System.out.println("100'e kadar olan asal sayilar ");
     }
 }
-
-

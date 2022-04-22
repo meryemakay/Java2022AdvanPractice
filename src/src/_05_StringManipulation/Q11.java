@@ -6,21 +6,15 @@ public class Q11 {
 		Asagidaki String degiskenini kullanarak  konsolda A L i yazdiriniz.
 		String  pickName = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 		 */
+        String  harfDeposu = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+char a=harfDeposu.charAt(harfDeposu.indexOf("A"));//A
+char l=harfDeposu.charAt(harfDeposu.indexOf("L"));//L
+char ı=harfDeposu.charAt(harfDeposu.indexOf("I"));//I
 
-        String str = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-        String str1=str.substring(0,1);
-        String str2=str.substring(11,12);
-        String str3=str.substring(8,9).toLowerCase();
-        System.out.println(str1+" "+str2+" "+str3);
+        System.out.println(""+a+l+ı);
 
-       char a=str.charAt(str.indexOf("A"));
-       char l=str.charAt(str.indexOf("L"));
-       char ı=str.charAt(str.indexOf("I"));
 
-        System.out.println(""+a +" "+ "" +l+"" +
-                " " +ı);
 
     }
-    }
 
-
+}

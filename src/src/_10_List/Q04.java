@@ -11,6 +11,7 @@ public class Q04 {
          ortalamayı geçen öğrenci sayısını bulan code create ediniz.
 
          */
+
         List<Integer> listNotlar = new ArrayList<>();
         Scanner scan = new Scanner(System.in);
         String dewamkee;
@@ -44,6 +45,3 @@ public class Q04 {
         System.out.println("ortalama gecen ogr sayisi : " + ortlamaGecenSayisi);
     }
 }
-
-
-

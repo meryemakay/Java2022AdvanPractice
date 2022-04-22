@@ -6,18 +6,11 @@ public class Q03 {
     public static void main(String[] args) {
 
 // Girilen bir ay numarasına göre , ayın kaç gün olduğunu sayı ile yazdırınız
-
         Scanner scan = new Scanner(System.in);
-        System.out.print("lutfen bır ay numarası gırınız");
-        int ayNo = scan.nextInt();
+        System.out.print("yılın kacıncı ayını öğrenmek istiyorsunuz : ");
+        int ay = scan.nextInt();
 
-
-
-        //ocak 31, subat 28, mart 31, nısan 30, mayıs 31,
-        // hazıran 30, temmuz 31, agustos 31 eylul 30
-        // ekım 31, kasım 30, aralık 31
-
-        switch (ayNo) {
+        switch (ay) {
             case 1:
             case 3:
             case 5:
@@ -25,28 +18,29 @@ public class Q03 {
             case 8:
             case 10:
             case 12:
-
-                System.out.println( "gırdıgnız ayda: 31 gundur");break;
-
+                System.out.println("girdiğiniz ayda 31 gün vardır");
+                break;
             case 4:
             case 6:
             case 9:
             case 11:
-                System.out.println("grdıgınız ayda: 30 gundur");break;
-
+                System.out.println("girdiğiniz ayda 30 gün vardır");
+                break;
             case 2:
-                System.out.println("lutfen bulundugunuz yılı gırınız");
-                int yıl=scan.nextInt();
-                if(yıl%4==0){
-                    System.out.println("gırdıgınız ayda 29 gun vardır");
-                }else
-                    System.out.println("gırdıgınız ayda 28 gun vardır");break;
+                System.out.print("lütfen bulundugunuz yılı giriniz : ");
+                int yıl = scan.nextInt();
 
+                if (yıl % 4 == 0) {
+                    System.out.println("girdiğiniz ayda 29 gün vardır");
+
+                } else {
+                    System.out.println("girdiğiniz ayda 28 gün vardır");
+                }
+                break;
             default:
-                System.out.println("hatalı gırıs yapıldı");
-
-
+                System.out.println("agam sen niddin hani yıl 12 aydı :-)");
         }
     }
 }
+
 

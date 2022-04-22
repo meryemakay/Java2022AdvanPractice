@@ -1,6 +1,7 @@
 package src._10_List;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
@@ -14,6 +15,7 @@ public class Q02 {
            Output:[Ali, Ayse, Can, Hasan, Suzan, Veli]
 
          */
+
         String isim[][] = {{"Ali", "Veli", "Ayse"}, {"Hasan", "Can"}, {"Suzan"}};
         yeniList(isim);
     }
@@ -33,4 +35,3 @@ public class Q02 {
     }
 
 }
-

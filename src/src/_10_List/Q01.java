@@ -16,7 +16,6 @@ public class Q01 {
          * OUTPUT : [Veli,Omer]
          */
 
-
         ArrayList<String> isimler = new ArrayList<String>(Arrays.asList("Ali", "Veli", "Ayse", "Fatma", "Omer"));
 //asList()--> String olarak verilen ifadelerin hepsini ArrayList!'in içine atar.
 // Yani list oluşturur. tek tek add demek zorunda kalmayiz
@@ -42,7 +41,10 @@ hatalı cozum...
         list1.add("Fatma");
         list1.add("Omer");
         System.out.println(list1);
+
         List<String> yeniList = new ArrayList<>();
+
+
         for (int i = 0; i < list1.size(); i++) {
             if (list1.get(i).toLowerCase().contains("a")){
                 yeniList.add(list1.get(i));
@@ -54,7 +56,4 @@ hatalı cozum...
     }
  */
 
-    }
-
-
-
+}

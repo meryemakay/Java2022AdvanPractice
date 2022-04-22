@@ -14,17 +14,26 @@ public class Ter02 {
          Harf degilse ekrana "Harf degil" yazdiriniz
         97:a  122:z ascii değeri
          */
+        Scanner scan = new Scanner(System.in);
 
-        Scanner scann=new Scanner(System.in);
-        System.out.println("Lutfen bir karakter giriniz : ");
-        char harf=scann.next().charAt(0);
-        if (harf>='a' && harf<='z'){
-            System.out.println("Kucuk harf");
-        } else  if (harf>='A' && harf<='Z'){
-            System.out.println("Buyuk harf");
-        }else System.out.println("Girdiginiz karakter harf degildir");
+        System.out.print("Bir character giriniz : ");
+        char ch = scan.next().charAt(0);
+
+        System.out.println("*****  TERNARY çözümü  *****");
+
+        String result = ((ch <= 'z' && ch >= 'a') || (ch >= 'A' && ch <= 'Z')) ?
+                ((ch <= 122 && ch >= 97) ? "Kucuk Harf" : "Buyuk Harf") : "Harf Degil";
+
+        System.out.println(result);
+
+        System.out.println("*****  if  çözümü  *****");
+
+        if ((ch <= 'z' && ch >= 'a') || (ch <= 'Z' && ch >= 'A')) {
+            if (ch <= 122 && ch >= 97) {
+                System.out.println("küçük harf");
+
+            } else System.out.println("Büyük harf");
+
+        } else System.out.println("Harf değil");
     }
 }
-
-
-

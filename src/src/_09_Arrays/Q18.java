@@ -2,8 +2,6 @@ package src._09_Arrays;
 
 import java.util.Arrays;
 
-import static java.util.Arrays.deepToString;
-
 public class Q18 {
     public static void main(String[] args) {
         /* TASK :
@@ -11,56 +9,6 @@ public class Q18 {
          String  "Javacilar cook afilli" ise cevap şöyle olmalıdır:
          { =2, a=3, r=1, c=1, v=1, o=2, f=1, l=2, J=1, i=2}
          */
-
-        String str = "Javacilar cook afilli";
-        String[] arr = str.split("");
-        Arrays.sort(arr);
-        System.out.println(Arrays.toString(arr));
-        int count = 0;
-        for (int i = 0; i < arr.length; i++) {
-            count = 1;
-            for (int j = i + 1; j < arr.length; j++) {
-                if (arr[i].charAt(0) == arr[j].charAt(0)) {
-                    count++;
-                } else {
-                    i = j - 1;
-                    break;
-                }
-            }
-            System.out.println(arr[i].charAt(0) + " = " + count);
-        }
-/*  String str = "Javacilar cook afilli";
-        int sayac = 0;
-        String harfler = "";
-        String adet = "";
-
-        for (int i = 0; i < str.length(); i++) {            sayac = 1;
-            if (!harfler.contains(str.substring(i, i + 1))) {
-                for (int j = i + 1; j < str.length(); j++) {
-                    if (str.substring(i, i + 1).equals(str.substring(j, j + 1))) {
-
-                        sayac++;
-                    }
-                }
-                harfler += str.substring(i, i + 1);
-                adet = adet.concat("" + sayac);
-            }
-        }
-        System.out.println(harfler);
-        System.out.println(adet);
-
-        String harfAdet = "";
-
-        for (int i = 0; i < harfler.length(); i++) {
-
-            harfAdet += harfler.substring(i, i + 1) + " = " + adet.substring(i, i + 1) + ",";
-        }
-        System.out.println(harfAdet);
-
-        String arr[] = harfAdet.split(",");
-        System.out.println(Arrays.toString(arr));
-
-
 
 
         String str = "Javacilar cook afilli";
@@ -110,9 +58,6 @@ public class Q18 {
         }
     }
 
-
-
-*/
-    }
-
 }
+    
+

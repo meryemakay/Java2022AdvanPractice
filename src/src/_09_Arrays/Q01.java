@@ -12,24 +12,21 @@ public class Q01 {
 
 	 */
 	public static void main(String[] args) {
-Scanner scan = new Scanner(System.in);
-System.out.print("kac elemanlı array istedıgınızı yazınız");
-int arrElemanSayısı= scan.nextInt();
+		Scanner scan =new Scanner(System.in);
+		System.out.print("arryinizin boyutunu giriniz :");
+		int arrBoyutu =scan.nextInt();
+
+		int arr []=new int[arrBoyutu];
+
+		for (int i = 0; i < arr.length; i++) {
+			System.out.println("Arrayin "+(i+1) +". elemanini giriniz : ");
+			arr[i]=scan.nextInt();
+		}
+		Arrays.sort(arr);
+		System.out.println(Arrays.toString(arr));
+		System.out.println("girdiginiz arrayin max - min eleman degeri :"+(arr[arrBoyutu - 1] - arr[0]));
 
 
-int[] array = new int[arrElemanSayısı];
-
-for (int i=0; i<array.length; i++){
-	System.out.println(i+1 + ".elemanı yazınız");
-
-	array[i]=scan.nextInt();
-
-
-}
-
-Arrays.sort((array));
-int fark =array[array.length-1]-array[0];
-		System.out.println("en buyuk ve en kucuk eleman farkı:"+ fark);
 	}
 
 }
